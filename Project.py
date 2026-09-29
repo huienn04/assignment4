@@ -45,3 +45,5 @@ if student == "y":
     discount = discount + (subtotal * 0.15)     # student -15%
 if distance > 20:
     discount = discount + (subtotal * 0.05) 
+
+total_fare = subtotal + surcharge - discount
