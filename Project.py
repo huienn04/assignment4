@@ -13,6 +13,9 @@ ride_type = input("Enter your choice (1 or 2):")
 # Get distance
 distance = float(input("Enter distance travelled(km):"))
 
+peak_hour = input("Is it peak hour? (y/n):").lower()
+raining = input("Is it raining? (y/n):").lower()
+
 if ride_type == "1":
     ride_name = "Economy"
     base_fare = 5.00
@@ -29,3 +32,9 @@ else:
 
 distance_fare = distance * rate_per_km
 subtotal = base_fare + distance_fare
+
+surcharge = 0
+if peak_hour == "y":
+    surcharge = surcharge + (subtotal * 0.20)   # peak hour +20%
+if raining == "y":
+    surcharge = surcharge + (subtotal * 0.10) 
