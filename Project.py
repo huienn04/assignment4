@@ -26,3 +26,6 @@ elif ride_type == "2":
 else:
     print("\nInvalid ride type.")
     exit()
+
+distance_fare = distance * rate_per_km
+subtotal = base_fare + distance_fare
